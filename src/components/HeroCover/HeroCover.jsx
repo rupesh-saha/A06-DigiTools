@@ -29,7 +29,7 @@ const HeroCover = () => {
 
       </section>
 
-      <section className="bg-[#7028f8] py-6 md:py-8 mb-32">
+      <section className="bg-[#7028f8] py-6 md:py-8 mb-14 md:mb-32">
         <div className="w-full mx-auto flex flex-col md:flex-row items-center justify-center gap-10 md:gap-0">
           
           <div className="flex flex-col items-center text-center md:flex-1 md:border-r border-white/30">
