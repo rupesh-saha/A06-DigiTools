@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ToggleSection = ({toggle, setToggle}) => {
+const ToggleSection = ({toggle, setToggle, cart}) => {
 
   const manageToggle = (value) => {
     if (value === "product") {
@@ -24,8 +24,8 @@ const ToggleSection = ({toggle, setToggle}) => {
         <button onClick={()=> manageToggle("product")} className={`${toggle === "product" ? "btn-primary btn" : "btn"} px-10 py-3 rounded-full font-bold text-lg shadow-xl shadow-indigo-200/50 mr-1`}>
           Products
         </button>
-        <button onClick={()=> manageToggle("cart")} className={`${toggle === "cart" ? "btn-primary btn" : "btn"} px-10 py-3 rounded-full font-bold text-lg`}>
-          Cart
+        <button onClick={()=> manageToggle("cart")} className={`${toggle === "cart" ? "btn-primary btn" : "btn"} px-10 py-3 rounded-full font-bold text-lg shadow-xl shadow-indigo-200/50`}>
+          Cart {cart.length !== 0 ? `(${cart.length})` : ""}
         </button>
       </div>
       

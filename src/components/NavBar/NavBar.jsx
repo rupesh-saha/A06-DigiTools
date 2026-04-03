@@ -3,7 +3,7 @@ import React from 'react';
 
 const NavBar = () => {
   return (
-    <nav>
+    <nav className="md:fixed md:top-0 md:left-0 md:w-full md:z-50">
       <div className="bg-base-100 shadow-sm">
         <div className="lg:max-w-[88%] navbar mx-auto">
           <div className="navbar-start">
