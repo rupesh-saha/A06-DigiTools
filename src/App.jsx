@@ -5,7 +5,7 @@ import NavBar from './components/NavBar/NavBar'
 import ToggleSection from './components/ToggleSection/ToggleSection'
 import Cards from './components/Cards/Cards'
 import Cart from './components/Cart/Cart'
-
+import GetStarted from './components/GetStarted/GetStarted'
 
 
 function App() {
@@ -14,14 +14,16 @@ function App() {
 
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar cart={cart}></NavBar>
       <HeroCover></HeroCover>
       <ToggleSection toggle={toggle} setToggle={setToggle} cart={cart}></ToggleSection>
        
       {toggle === "product" 
       ? (  <Cards cart={cart} setCart={setCart}/> ) 
-      : (  <Cart cart={cart}/> )
+      : (  <Cart cart={cart} setCart={setCart}/> )
       }
+
+      <GetStarted></GetStarted>
     </>
   )
 }

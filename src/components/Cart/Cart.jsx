@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trash2 } from 'lucide-react';
 
-const Cart = ({cart}) => {
+const Cart = ({cart, setCart}) => {
 
   if (cart.length === 0) {
     return (
@@ -11,9 +11,29 @@ const Cart = ({cart}) => {
       </section>
     );
   }
+
+  let total = 0;
+
+  const deleteCart = (item) => {
+    const filteredCart = cart.filter(items => items !== item );
+    setCart(filteredCart);
+    total = Number(total) - Number(item.price);
+  }
+
+  cart.forEach(item => {
+    total += Number(item.price);
+  });
+
+  const clearCart = () => {
+    const clearedCart = [];
+    setCart(clearedCart);
+  }
+
   
+    
 
   return (
+
     <section className="md:max-w-[88%] md:mx-auto p-8 rounded-xl flex flex-col gap-4 border border-zinc-100 shadow mx-3 mb-10">
 
       <h2 className="text-2xl font-bold">Your Cart</h2>
@@ -32,7 +52,7 @@ const Cart = ({cart}) => {
                   <p className="text-gray-500 text-sm">${item.price}</p>
                 </div>
               </div>
-              <button className="text-pink-500 hover:text-pink-900 font-medium text-sm transition-colors">
+              <button onClick={() => deleteCart(item)} className="text-pink-500 hover:text-pink-900 font-medium text-sm transition-colors">
                 Remove
               </button>
             </div>
@@ -42,10 +62,10 @@ const Cart = ({cart}) => {
       <div className="mt-3 pt-6 border-t border-gray-100">
           <div className="flex justify-between items-center mb-6">
             <span className="text-gray-800 font-medium">Total:</span>
-            <span className="text-3xl font-bold text-gray-900">$</span>
+            <span className="text-3xl font-bold text-gray-900">${total}</span>
           </div>
 
-          <button className="w-full btn btn-primary hover:bg-[#6D28D9] text-white font-semibold py-4 rounded-full transition-all shadow-lg shadow-purple-200 hover:scale-103 active:scale-96">
+          <button onClick={clearCart} className="w-full btn btn-primary hover:bg-[#6D28D9] text-white font-semibold py-4 rounded-full transition-all shadow-lg shadow-purple-200 hover:scale-103 active:scale-96">
             Proceed To Checkout
           </button>
       </div>

@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "name": "Basic",
+    "price": {
+      "amount": 0,
+      "currency": "USD",
+      "period": "monthly"
+    },
+    "features": [
+      "1 project per month"
+    ],
+    "highlighted": false
+  },
+  {
+    "id": 2,
+    "name": "Pro",
+    "price": {
+      "amount": 19,
+      "currency": "USD",
+      "period": "monthly"
+    },
+    "features": [
+      "Unlimited projects",
+      "Cloud sync",
+      "Advanced analytics"
+    ],
+    "highlighted": true
+  },
+  {
+    "id": 3,
+    "name": "Enterprise",
+    "price": {
+      "amount": 49,
+      "currency": "USD",
+      "period": "monthly"
+    },
+    "features": [
+      "Dedicated support",
+      "SLA guarantee",
+      "Custom solutions"
+    ],
+    "highlighted": false
+  }
+]
