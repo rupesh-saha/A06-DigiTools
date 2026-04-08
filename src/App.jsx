@@ -6,6 +6,7 @@ import ToggleSection from './components/ToggleSection/ToggleSection'
 import Cards from './components/Cards/Cards'
 import Cart from './components/Cart/Cart'
 import GetStarted from './components/GetStarted/GetStarted'
+import Subscriptions from './components/Subscriptions/Subscriptions'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       }
 
       <GetStarted></GetStarted>
+      <Subscriptions></Subscriptions>
     </>
   )
 }

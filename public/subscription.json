@@ -2,44 +2,59 @@
   {
     "id": 1,
     "name": "Basic",
+    "info": "Perfect for getting started",
     "price": {
       "amount": 0,
       "currency": "USD",
       "period": "monthly"
     },
     "features": [
+      "Access to 10 free tools",
+      "Basic templates",
+      "Community support",
       "1 project per month"
     ],
-    "highlighted": false
+    "highlighted": false,
+    "btn": "Get Started Free"
   },
   {
     "id": 2,
     "name": "Pro",
+    "info": "Perfect for getting started",
     "price": {
       "amount": 19,
       "currency": "USD",
       "period": "monthly"
     },
     "features": [
+      "Access to all premium tools",
+      "Unlimited templates",
+      "Priority support",
       "Unlimited projects",
       "Cloud sync",
       "Advanced analytics"
     ],
-    "highlighted": true
+    "highlighted": true,
+    "btn": "Get Pro Trial"
   },
   {
     "id": 3,
     "name": "Enterprise",
+    "info": "Perfect for getting started",
     "price": {
       "amount": 49,
       "currency": "USD",
       "period": "monthly"
     },
     "features": [
+      "Everything in Pro",
+      "Team collaboration",
+      "Custom integrations",
       "Dedicated support",
       "SLA guarantee",
-      "Custom solutions"
+      "Custom branding"
     ],
-    "highlighted": false
+    "highlighted": false,
+    "btn": "Contact Sales"
   }
 ]
