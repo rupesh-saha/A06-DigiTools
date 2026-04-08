@@ -1,5 +1,7 @@
 import React from 'react';
 import { Trash2 } from 'lucide-react';
+import { ToastContainer, toast } from 'react-toastify';
+
 
 const Cart = ({cart, setCart}) => {
 
@@ -18,6 +20,7 @@ const Cart = ({cart, setCart}) => {
     const filteredCart = cart.filter(items => items !== item );
     setCart(filteredCart);
     total = Number(total) - Number(item.price);
+    toast("Deleted item Cart");
   }
 
   cart.forEach(item => {
@@ -27,6 +30,7 @@ const Cart = ({cart, setCart}) => {
   const clearCart = () => {
     const clearedCart = [];
     setCart(clearedCart);
+    toast("Deleted item Cart");
   }
 
   

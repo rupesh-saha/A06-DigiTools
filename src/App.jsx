@@ -8,6 +8,8 @@ import Cart from './components/Cart/Cart'
 import GetStarted from './components/GetStarted/GetStarted'
 import Subscriptions from './components/Subscriptions/Subscriptions'
 import FooterSection from './components/FooterSection/FooterSection'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 
 function App() {
@@ -24,12 +26,14 @@ function App() {
       ? (  <Cards cart={cart} setCart={setCart}/> ) 
       : (  <Cart cart={cart} setCart={setCart}/> )
       }
+      
 
       <GetStarted></GetStarted>
       <Subscriptions></Subscriptions>
 
       <FooterSection></FooterSection>
-
+      
+      <ToastContainer></ToastContainer>
     </>
   )
 }

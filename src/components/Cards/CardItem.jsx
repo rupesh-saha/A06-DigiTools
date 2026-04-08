@@ -1,4 +1,6 @@
 import { Check} from 'lucide-react';
+import { ToastContainer, toast } from 'react-toastify';
+
 
 
 const CardItem = ({item, cart, setCart}) => {
@@ -17,6 +19,7 @@ const CardItem = ({item, cart, setCart}) => {
   const manageCart = () => {
     if (!foundInCart) {
       setCart([...cart, item]);
+      toast("Added to Cart");
     }
   };
 
@@ -57,7 +60,9 @@ const CardItem = ({item, cart, setCart}) => {
 
       <button onClick={manageCart}  className={`w-full py-3 rounded-full btn btn-primary transition-opacity ${
       foundInCart ? "opacity-50 cursor-not-allowed" : "hover:opacity-90"}`}>
+        
         {foundInCart ? "Added to Cart" : "Buy Now"}
+        
       </button>
 
     </div>
