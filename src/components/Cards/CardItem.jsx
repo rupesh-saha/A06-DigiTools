@@ -1,17 +1,24 @@
-import React, { useState } from 'react';
 import { Check} from 'lucide-react';
 
 
 const CardItem = ({item, cart, setCart}) => {
-  const [isClicked, setIsClicked] = useState(false);
+  
+  let foundInCart = false;
+
+  for (let i = 0; i < cart.length; i++) {
+
+    if (cart[i].name === item.name) {
+      foundInCart = true;
+      break;
+    }
+
+  }
 
   const manageCart = () => {
-    
-    setIsClicked(true);
-    let newCart = [...cart, item];
-    setCart(newCart);
-    console.log(cart);
-  }
+    if (!foundInCart) {
+      setCart([...cart, item]);
+    }
+  };
 
   return (
     <div className=" bg-white border border-zinc-100 rounded-4xl p-5 shadow">
@@ -46,15 +53,11 @@ const CardItem = ({item, cart, setCart}) => {
           )
         }
 
-        {/* <li className="flex items-center gap-3 text-[#627382]">
-          <Check size={18} className="text-[#059669]" strokeWidth={3} />
-          <span className="text-sm font-medium">Grammar checker</span>
-        </li> */}
       </ul>
 
-      <button onClick={manageCart} className={`w-full py-3 rounded-full btn btn-primary transition-opacity ${
-      isClicked ? "opacity-50 cursor-not-allowed" : "hover:opacity-90"}`}>
-        {isClicked ? "Added to Cart" : "Buy Now"}
+      <button onClick={manageCart}  className={`w-full py-3 rounded-full btn btn-primary transition-opacity ${
+      foundInCart ? "opacity-50 cursor-not-allowed" : "hover:opacity-90"}`}>
+        {foundInCart ? "Added to Cart" : "Buy Now"}
       </button>
 
     </div>
