@@ -1,16 +1,35 @@
-# React + Vite
+# 🚀 DigiTools
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and simple web-based toolkit that provides useful digital tools in one place to improve productivity and everyday tasks.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📖 Description
 
-## React Compiler
+DigiTools is a lightweight and user-friendly web application designed to bring multiple essential digital utilities together. Instead of jumping between different websites, users can access everything in one clean interface.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The goal of this project is to practice real-world web development while building something actually useful.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Used
+
+- HTML5  
+- CSS3 (DaisyUI + Tailwind CSS)  
+- JavaScript (ES6)  
+- React (if used, otherwise remove this)  
+
+---
+
+## ✨ Features
+
+- ⚡ **Multiple Tools in One Place**  
+  Access different utilities without switching tabs or apps.
+
+- 🎯 **Clean & Responsive UI**  
+  Built with DaisyUI for a smooth and modern user experience.
+
+- 🚀 **Fast & Lightweight**  
+  Optimized for performance with minimal load time.
+
+---
